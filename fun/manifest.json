@@ -1,0 +1,49 @@
+{
+  "short_name": "Zeal",
+  "name": "Zeal Wallet",
+  "version": "0.1.34",
+  "manifest_version": 3,
+  "permissions": [
+    "clipboardRead",
+    "storage"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "index.html",
+        "ledger.html",
+        "inpage.js"
+      ],
+      "matches": [
+        "https://*/*"
+      ]
+    }
+  ],
+  "content_scripts": [
+    {
+      "js": [
+        "content_script.js"
+      ],
+      "matches": [
+        "https://*/*"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+
+  "action": {
+    "default_popup": "index.html?type=extension",
+    "default_icon": {
+      "16": "action-16.png",
+      "32": "action-32.png",
+      "48": "action-48.png",
+      "128": "action-128.png"
+    }
+  },
+  "icons": {
+    "16": "page-16.png",
+    "32": "page-32.png",
+    "48": "page-48.png",
+    "128": "page-128.png"
+  }
+}
